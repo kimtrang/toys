@@ -29,7 +29,5 @@
     when: install_version.stdout != version
 
   - name: Check if webservices link is live
-    uri: url=http://localhost:8091/ui/index.html
-    return_content: yes
-    register: web_status
-    failed_when: "'Couchbase Server' not in web_status.content"
+    uri:
+        url: http://localhost:8091/ui/index.html
