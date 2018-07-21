@@ -29,7 +29,7 @@
     when: install_version.stdout != version
 
   - name: Check if webservices link is live
-    uri: url=http://{{ ansible_default_ipv4.address }}:8091
+    uri: url=http://localhost:8091/ui/index.html
     return_content: yes
     register: web_status
-    failed_when: "'AWESOME' not in web_status.content"
+    failed_when: "'Couchbase Server' not in web_status.content"
