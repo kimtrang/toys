@@ -3,9 +3,6 @@
 - hosts: all
   any_errors_fatal: true
 
-  vars:
-    couchbase_server_package_url: "{{ couchbase_server_package_base_url }}/{{ couchbase_server_package }}"
-
   tasks:
   # Remove server package
   - name: Couchbase Server | Uninstall cb server msi
