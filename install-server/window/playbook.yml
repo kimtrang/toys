@@ -20,7 +20,7 @@
 
   - name: Couchbase Server |  Copy server msi "{{ couchbase_server_package }}"
     win_copy:
-        src: {{ couchbase_server_package }}
+        src: "{{ couchbase_server_package }}"
         dest: "C:\\Users\\Administrator\\AppData\\Local\\Temp\\{{ couchbase_server_package }}"
 
   # Install server service msi
